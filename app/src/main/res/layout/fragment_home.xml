@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/home_linear_layout_margin">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnCount="2"
+        android:rowCount="3"
+        android:alignmentMode="alignMargins"
+        android:columnOrderPreserved="false"
+        android:layout_gravity="center">
+
+
+        <Button
+            android:id="@+id/inventory_list_btn"
+            android:layout_width="@dimen/home_btn_layout_width_height"
+            android:layout_height="@dimen/home_btn_layout_width_height"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_marginRight="@dimen/home_btn_margins"
+            android:layout_gravity="fill"
+            android:text="@string/inv_lists_btn_text"
+            android:drawableLeft="@drawable/notebook_svgrepo_com"
+            />
+
+
+        <Button
+            android:id="@+id/assets_btn"
+            android:layout_width="@dimen/home_btn_layout_width_height"
+            android:layout_height="@dimen/home_btn_layout_width_height"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_marginLeft="@dimen/home_btn_margins"
+            android:layout_gravity="fill"
+            android:text="@string/assets_btn_text"
+            android:drawableLeft="@drawable/pencil_case_svgrepo_com"/>
+
+
+        <Button
+            android:id="@+id/employees_btn"
+            android:layout_width="@dimen/home_btn_layout_width_height"
+            android:layout_height="@dimen/home_btn_layout_width_height"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_marginRight="@dimen/home_btn_margins"
+            android:layout_gravity="fill"
+            android:text="@string/employees_btn_text"
+            android:drawableLeft="@drawable/person_holding_a_glass_of_milk_svgrepo_com"/>
+
+        <Button
+            android:id="@+id/locations_btn"
+            android:layout_width="@dimen/home_btn_layout_width_height"
+            android:layout_height="@dimen/home_btn_layout_width_height"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_marginLeft="@dimen/home_btn_margins"
+            android:layout_gravity="fill"
+            android:text="@string/locations_btn_text"
+            android:drawableLeft="@drawable/location_svgrepo_com"/>
+
+        <Button
+            android:id="@+id/settings_btn"
+            android:layout_width="@dimen/home_btn_layout_width_height"
+            android:layout_height="@dimen/home_btn_layout_width_height"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_marginRight="@dimen/home_btn_margins"
+            android:layout_gravity="fill"
+            android:text="@string/settings_btn_text"
+            android:drawableLeft="@drawable/settings_svgrepo_com"/>
+
+        <Button
+            android:id="@+id/about_btn"
+            android:layout_width="@dimen/home_btn_layout_width_height"
+            android:layout_height="@dimen/home_btn_layout_width_height"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_marginLeft="@dimen/home_btn_margins"
+            android:layout_gravity="fill"
+            android:text="@string/about_btn_text"
+            android:drawableLeft="@drawable/info_circle_svgrepo_com"/>
+
+    </GridLayout>
+
+</LinearLayout>

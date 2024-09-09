@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="@dimen/location_item_padding">
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/employee_details_lastname_marginTop"
+        android:layout_margin="@dimen/location_item_layout_margin"
+        android:layout_marginStart="@dimen/employee_cardview_marginStartEnd"
+        android:layout_marginTop="@dimen/employee_cardview_marginTopBottom"
+        android:layout_marginEnd="@dimen/employee_cardview_marginStartEnd"
+        android:layout_marginBottom="@dimen/employee_cardview_marginTopBottom"
+        android:outlineSpotShadowColor="@color/colorAccent"
+        app:cardCornerRadius="@dimen/location_item_card_corner_radius"
+        app:cardElevation="@dimen/asset_insert_card_elev"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="@dimen/employee_details_firstlastname_lbl_marginLeft"
+            android:layout_marginTop="@dimen/asset_searchview_layout_height"
+            android:textSize="@dimen/employee_details_tv_text_size"
+            android:textStyle="bold"
+            android:text="@string/insert_location_name_lbl" />
+
+        <EditText
+            android:id="@+id/location_insert_name_edit"
+            android:layout_width="@dimen/employee_insert_et_width"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="@dimen/employee_details_lastname_marginTop"
+            android:layout_marginTop="@dimen/employee_insert_et_firstname_marginTop"
+            android:textSize="@dimen/employee_details_tv_text_size"
+            android:inputType="text"
+            />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <Button
+        android:id="@+id/btn_insert_location"
+        android:layout_width="@dimen/asset_insert_imageview_height_width"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+
+        android:text="@string/insert_location_btn_lbl"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

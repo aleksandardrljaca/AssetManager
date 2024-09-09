@@ -1,0 +1,89 @@
+<resources>
+    <!-- Application name -->
+    <string name="app_name">Asset Manager</string>
+    <!-- Home fragment button labels-->
+    <string name="inv_lists_btn_text">Inventory lists</string>
+    <string name="assets_btn_text">Assets</string>
+    <string name="employees_btn_text">Employees</string>
+    <string name="locations_btn_text">Locations</string>
+    <string name="settings_btn_text">Settings</string>
+    <string name="about_btn_text">About</string>
+    <!-- Radio buttons text -->
+    <string name="sr_lang">Serbian</string>
+    <string name="en_lang">English</string>
+    <!-- Language settings label -->
+    <string name="lang_settings">Select desired language</string>
+    <!-- Appbar fragment names -->
+    <string name="home_fragment_name">Home</string>
+    <string name="settings_fragment_name">Settings</string>
+    <string name="inventory_fragment_name">Inventory list</string>
+    <string name="assets_fragment_name">Assets</string>
+    <string name="employees_fragment_name">Employees</string>
+    <string name="locations_fragment_name">Locations</string>
+    <string name="about_fragment_name">About</string>
+    <!-- Details title for all fragments showing detail info -->
+    <string name="all_details_fragment_name">Details</string>
+    <!-- Employee Details fragment -->
+    <!-- Update title for all fragments showing detail info -->
+    <string name="all_update_fragment_name">Update</string>
+    <!-- Insert title for all fragments showing detail info -->
+    <string name="all_insert_fragment_name">Insert</string>
+    <!-- Employee insert fragment -->
+    <string name="insert_emp_btn_lbl">Insert</string>
+    <!-- Employee update fragment -->
+    <string name="update_first_name_lbl">First name:</string>
+    <string name="update_last_name_lbl">Last name:</string>
+    <string name="update_emp_btn_lbl">Update</string>
+    <string name="emp_updated_msg">Employee updated</string>
+    <string name="emp_not_updated_msg">Nothing to update</string>
+    <!-- Employee delete button label -->
+    <string name="employee_del_btn_text">Delete</string>
+    <string name="emp_details_liabilities_btn">Liabilities</string>
+    <!-- Location insert fragment -->
+    <string name="insert_location_btn_lbl">Insert</string>
+    <string name="insert_location_name_lbl">Name:</string>
+    <!-- Location update fragment -->
+    <string name="update_location_name_lbl">Name:</string>
+    <string name="update_location_btn_lbl">Update</string>
+    <string name="location_updated_msg">Location updated</string>
+    <string name="location_not_updated_msg">Nothing to update</string>
+    <!-- Location delete button label -->
+    <string name="location_del_btn_text">Delete</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <!-- Details/Update context menu (onItemClick) strings -->
+    <string name="context_title">Select option</string>
+    <string name="context_details">Details</string>
+    <string name="context_update">Update</string>
+    <!-- Assets -->
+    <string name="asset_add_pic_lbl">Add</string>
+    <string name="asset_name_lbl">Name:</string>
+    <string name="asset_employee_lbl">Employee:</string>
+    <string name="asset_location_lbl">Location:</string>
+    <string name="asset_date_lbl">Date:</string>
+    <string name="asset_desc_lbl">Description:</string>
+    <string name="asset_price_lbl">Price:</string>
+    <string name="asset_barcode_lbl">Barcode:</string>
+    <string name="asset_del_btn_lbl">Delete</string>
+    <string name="asset_update_btn_lbl">Update</string>
+    <string name="asset_insert_btn_lbl">Insert</string>
+    <string name="asset_barcode_btn_lbl">Scan</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="inv_item_new_emp_lbl">New employee</string>
+    <string name="inv_item_new_loc_lbl">New location</string>
+    <string name="inv_item_save_btn_lbl">Save</string>
+    <string name="inv_item_find_barcode_btn_lbl">Find</string>
+    <string name="inv_list_et_hint_lbl">Name</string>
+    <string name="inv_list_name_tv_text">Enter list name</string>
+
+
+    <!-- Toast messages -->
+    <string name="update_msg">Successfully updated</string>
+    <string name="insert_msg">Successfully inserted</string>
+    <string name="cannot_update_msg">Nothing to update</string>
+    <string name="missing_data_msg">Missing data</string>
+    <string name="barcode_not_entered_msg">Barcode not entered</string>
+    <string name="non_valid_input_msg">Input not valid</string>
+    <string name="no_asset_barcode_msg">No asset with given barcode</string>
+    <string name="scan_canceled_msg">Scan cancelled</string>
+</resources>

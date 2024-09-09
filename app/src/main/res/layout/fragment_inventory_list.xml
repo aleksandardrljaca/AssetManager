@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.EmployeeFragment"
+
+
+    >
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/inventory_list_recycler"
+        android:layout_width="@dimen/home_btn_layout_width_height"
+        android:layout_height="@dimen/home_btn_layout_width_height"
+        android:layout_marginTop="@dimen/location_item_padding"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inventory_list_search_view" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/inventory_list_floating_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/location_item_padding"
+        android:clickable="true"
+        android:src="@android:drawable/ic_menu_add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.934" />
+
+    <SearchView
+        android:id="@+id/inventory_list_search_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/asset_searchview_layout_height"
+        android:layout_marginStart="@dimen/location_item_layout_margin"
+        android:layout_marginTop="@dimen/location_item_layout_margin"
+        android:layout_marginEnd="@dimen/location_item_layout_margin"
+        android:layout_marginBottom="@dimen/location_item_layout_margin"
+        app:layout_constraintBottom_toTopOf="@+id/inventory_list_recycler"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:iconifiedByDefault="false"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

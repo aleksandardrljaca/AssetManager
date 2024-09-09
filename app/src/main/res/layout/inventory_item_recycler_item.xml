@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/location_item_layout_margin"
+    app:cardCornerRadius="@dimen/location_item_padding"
+    app:cardElevation="@dimen/inv_item_rec_card_view_elev"
+    android:id="@+id/inv_item_rl">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/location_item_padding">
+
+        <Button
+            android:id="@+id/btn_del_asset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/employee_del_btn_text"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="@color/colorAccent"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:visibility="invisible"/>
+
+        <GridLayout
+            android:id="@+id/grid_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/btn_del_asset"
+            android:layout_toLeftOf="@id/inv_item_image_view"
+            android:layout_marginLeft="@dimen/asset_rec_item_grid_imageview_margin_start_left"
+            android:columnCount="2"
+            android:rowCount="3"
+            android:orientation="horizontal"
+            android:layout_marginStart="@dimen/asset_rec_item_grid_imageview_margin_start_left">
+
+            <TextView
+                android:layout_width="@dimen/asset_rec_item_textview_layout_width"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="@string/asset_name_lbl" />
+
+            <TextView
+                android:id="@+id/inv_item_name_tv"
+                android:layout_width="@dimen/asset_rec_item_textview_layout_width"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+
+                />
+
+            <TextView
+                android:layout_width="@dimen/asset_rec_item_textview_layout_width"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="@string/asset_employee_lbl"
+                />
+
+            <TextView
+                android:id="@+id/inv_item_employee_tv"
+                android:layout_width="@dimen/asset_rec_item_textview_layout_width"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+
+                />
+
+            <TextView
+                android:layout_width="@dimen/asset_rec_item_textview_layout_width"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="@string/asset_location_lbl"
+                />
+
+            <TextView
+                android:id="@+id/inv_item_location_tv"
+                android:layout_width="@dimen/asset_rec_item_textview_layout_width"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+
+                />
+            <TextView
+                android:layout_width="@dimen/asset_rec_item_textview_layout_width"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="@string/asset_date_lbl"
+                />
+
+            <TextView
+                android:id="@+id/inv_item_date_tv"
+                android:layout_width="@dimen/asset_rec_item_textview_layout_width"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+
+                />
+            <TextView
+                android:id="@+id/inv_item_new_emp_lbl"
+                android:layout_width="@dimen/asset_rec_item_textview_layout_width"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="@string/inv_item_new_emp_lbl"
+                ></TextView>
+            <TextView
+                android:id="@+id/inv_item_new_emp_tv"
+                android:layout_width="@dimen/asset_rec_item_textview_layout_width"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+
+                ></TextView>
+            <TextView
+                android:id="@+id/inv_item_new_loc_lbl"
+                android:layout_width="@dimen/asset_rec_item_textview_layout_width"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="@string/inv_item_new_loc_lbl"
+                ></TextView>
+            <TextView
+                android:id="@+id/inv_item_new_loc_tv"
+                android:layout_width="@dimen/asset_rec_item_textview_layout_width"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+
+                ></TextView>
+
+        </GridLayout>
+
+        <ImageView
+            android:id="@+id/inv_item_image_view"
+            android:layout_width="@dimen/asset_rec_item_imageview_layout_width_height"
+            android:layout_height="@dimen/asset_rec_item_imageview_layout_width_height"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/asset_rec_item_grid_imageview_margin_start_left"
+            android:src="@drawable/ic_launcher_foreground" />
+
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>

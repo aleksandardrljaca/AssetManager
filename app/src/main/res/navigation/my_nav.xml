@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="org.unibl.etf.assetmanager.ui.fragments.HomeFragment"
+        android:label="@string/home_fragment_name"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment"
+            app:enterAnim="@android:anim/fade_in" />
+        <action
+            android:id="@+id/action_homeFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment"
+            app:enterAnim="@android:anim/fade_in" />
+        <action
+            android:id="@+id/action_homeFragment_to_employeeFragment"
+            app:destination="@id/employeeFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_locationsFragment"
+            app:destination="@id/locationsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_assetFragment"
+            app:destination="@id/assetFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_inventoryListFragment"
+            app:destination="@id/inventoryListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="org.unibl.etf.assetmanager.ui.fragments.AboutFragment"
+        android:label="@string/about_fragment_name"
+        tools:layout="@layout/fragment_about" >
+        <action
+            android:id="@+id/action_aboutFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="org.unibl.etf.assetmanager.ui.fragments.SettingsFragment"
+        android:label="@string/settings_fragment_name"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/employeeFragment"
+        android:name="org.unibl.etf.assetmanager.ui.fragments.EmployeeFragment"
+        android:label="@string/employees_fragment_name"
+        tools:layout="@layout/fragment_employee" >
+        <action
+            android:id="@+id/action_employeeFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_employeeFragment_to_employeeDetailsFragment"
+            app:destination="@id/employeeDetailsFragment" />
+        <action
+            android:id="@+id/action_employeeFragment_to_updateEmployeeFragment"
+            app:destination="@id/updateEmployeeFragment" />
+        <action
+            android:id="@+id/action_employeeFragment_to_employeeInsertFragment"
+            app:destination="@id/employeeInsertFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/employeeDetailsFragment"
+        android:name="org.unibl.etf.assetmanager.ui.fragments.EmployeeDetailsFragment"
+        android:label="@string/all_details_fragment_name"
+        tools:layout="@layout/fragment_employee_details" >
+        <action
+            android:id="@+id/action_employeeDetailsFragment_to_employeeFragment"
+            app:destination="@id/employeeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateEmployeeFragment"
+        android:name="org.unibl.etf.assetmanager.ui.fragments.EmployeeUpdateFragment"
+        android:label="@string/all_update_fragment_name"
+        tools:layout="@layout/fragment_employee_update" >
+        <action
+            android:id="@+id/action_updateEmployeeFragment_to_employeeFragment"
+            app:destination="@id/employeeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/employeeInsertFragment"
+        android:name="org.unibl.etf.assetmanager.ui.fragments.EmployeeInsertFragment"
+        android:label="@string/all_insert_fragment_name"
+        tools:layout="@layout/fragment_employee_insert" >
+        <action
+            android:id="@+id/action_employeeInsertFragment_to_employeeFragment"
+            app:destination="@id/employeeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/locationsFragment"
+        android:name="org.unibl.etf.assetmanager.ui.fragments.LocationsFragment"
+        android:label="@string/locations_fragment_name"
+        tools:layout="@layout/fragment_locations" >
+        <action
+            android:id="@+id/action_locationsFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_locationsFragment_to_locationInsertFragment"
+            app:destination="@id/locationInsertFragment" />
+        <action
+            android:id="@+id/action_locationsFragment_to_locationUpdateFragment"
+            app:destination="@id/locationUpdateFragment" />
+        <action
+            android:id="@+id/action_locationsFragment_to_locationDetailsFragment"
+            app:destination="@id/locationDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/locationInsertFragment"
+        android:name="org.unibl.etf.assetmanager.ui.fragments.LocationInsertFragment"
+        android:label="@string/all_insert_fragment_name"
+        tools:layout="@layout/fragment_location_insert" >
+        <action
+            android:id="@+id/action_locationInsertFragment_to_locationsFragment"
+            app:destination="@id/locationsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/locationDetailsFragment"
+        android:name="org.unibl.etf.assetmanager.ui.fragments.LocationDetailsFragment"
+        android:label="@string/all_details_fragment_name"
+        tools:layout="@layout/fragment_location_details" >
+        <action
+            android:id="@+id/action_locationDetailsFragment_to_locationsFragment"
+            app:destination="@id/locationsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/locationUpdateFragment"
+        android:name="org.unibl.etf.assetmanager.ui.fragments.LocationUpdateFragment"
+        android:label="@string/all_update_fragment_name"
+        tools:layout="@layout/fragment_location_update" >
+        <action
+            android:id="@+id/action_locationUpdateFragment_to_locationsFragment"
+            app:destination="@id/locationsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/assetFragment"
+        android:name="org.unibl.etf.assetmanager.ui.fragments.AssetFragment"
+        android:label="@string/assets_fragment_name"
+        tools:layout="@layout/fragment_asset" >
+        <action
+            android:id="@+id/action_assetFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_assetFragment_to_assetInsertFragment"
+            app:destination="@id/assetInsertFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/assetInsertFragment"
+        android:name="org.unibl.etf.assetmanager.ui.fragments.AssetInsertFragment"
+        android:label="@string/all_insert_fragment_name"
+        tools:layout="@layout/fragment_asset_insert" >
+        <action
+            android:id="@+id/action_assetInsertFragment_to_assetFragment"
+            app:destination="@id/assetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/inventoryListFragment"
+        android:name="org.unibl.etf.assetmanager.ui.fragments.InventoryListFragment"
+        android:label="@string/inventory_fragment_name"
+        tools:layout="@layout/fragment_inventory_list" >
+        <action
+            android:id="@+id/action_inventoryListFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_inventoryListFragment_to_inventoryListDetailsFragment"
+            app:destination="@id/inventoryListDetailsFragment" />
+        <action
+            android:id="@+id/action_inventoryListFragment_to_inventoryListInsertFragment"
+            app:destination="@id/inventoryListInsertFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/inventoryListDetailsFragment"
+        android:name="org.unibl.etf.assetmanager.ui.fragments.InventoryListDetailsFragment"
+        android:label="@string/all_details_fragment_name"
+        tools:layout="@layout/fragment_inventory_list_details" >
+        <action
+            android:id="@+id/action_inventoryListDetailsFragment_to_inventoryListFragment"
+            app:destination="@id/inventoryListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/inventoryListInsertFragment"
+        android:name="org.unibl.etf.assetmanager.InventoryListInsertFragment"
+        android:label="@string/all_insert_fragment_name"
+        tools:layout="@layout/fragment_inventory_list_insert" >
+        <action
+            android:id="@+id/action_inventoryListInsertFragment_to_inventoryListFragment"
+            app:destination="@id/inventoryListFragment" />
+        <action
+            android:id="@+id/action_inventoryListInsertFragment_to_inventoryListItemInsertFragment"
+            app:destination="@id/inventoryListItemInsertFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/inventoryListItemInsertFragment"
+        android:name="org.unibl.etf.assetmanager.InventoryListItemInsertFragment"
+        android:label="@string/all_insert_fragment_name"
+        tools:layout="@layout/fragment_inventory_list_item_insert" >
+        <action
+            android:id="@+id/action_inventoryListItemInsertFragment_to_inventoryListInsertFragment"
+            app:destination="@id/inventoryListInsertFragment" />
+    </fragment>
+</navigation>

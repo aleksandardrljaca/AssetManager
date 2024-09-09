@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.EmployeeFragment"
+
+
+    >
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/asset_recycler"
+        android:layout_width="@dimen/asset_recview_layout_width_height"
+        android:layout_height="@dimen/asset_recview_layout_width_height"
+        android:layout_marginTop="@dimen/asset_recview_margin_top_end"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/asset_search_view" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/asset_floating_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/asset_recview_margin_top_end"
+        android:clickable="true"
+        android:src="@android:drawable/ic_menu_add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.934" />
+
+    <SearchView
+        android:id="@+id/asset_search_view"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="@dimen/asset_searchview_layout_margins"
+        android:layout_marginTop="@dimen/asset_searchview_layout_margins"
+        android:layout_marginEnd="@dimen/asset_searchview_layout_margins"
+        android:layout_marginBottom="@dimen/asset_searchview_layout_margins"
+        app:layout_constraintBottom_toTopOf="@+id/asset_recycler"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:iconifiedByDefault="false"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

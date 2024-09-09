@@ -1,0 +1,74 @@
+<resources>
+    <string name="app_name">Asset Manager</string>
+    <string name="inv_lists_btn_text">Popisna lista</string>
+    <string name="assets_btn_text">Osnovna sredstva</string>
+    <string name="employees_btn_text">Zaposleni</string>
+    <string name="locations_btn_text">Lokacije</string>
+    <string name="settings_btn_text">Podesavanja</string>
+    <string name="about_btn_text">O aplikaciji</string>
+    <string name="sr_lang">Srpski</string>
+    <string name="en_lang">Engleski</string>
+    <string name="lang_settings">Odaberite željeni jezik</string>
+    <string name="home_fragment_name">Glavno</string>
+    <string name="settings_fragment_name">Podešavanja</string>
+    <string name="inventory_fragment_name">Popisna lista</string>
+    <string name="assets_fragment_name">Osnovna sredstva</string>
+    <string name="employees_fragment_name">Zaposleni</string>
+    <string name="locations_fragment_name">Lokacije</string>
+    <string name="about_fragment_name">O aplikaciji</string>
+    <string name="employee_del_btn_text">Obriši</string>
+    <string name="all_details_fragment_name">Detalji</string>
+    <string name="all_update_fragment_name">Ažuriranje</string>
+    <string name="all_insert_fragment_name">Dodavanje</string>
+    <string name="insert_emp_btn_lbl">Dodaj</string>
+    <string name="update_first_name_lbl">Ime:</string>
+    <string name="update_last_name_lbl">Prezime:</string>
+    <string name="update_emp_btn_lbl">Ažuriraj</string>
+    <string name="emp_updated_msg">Podaci ažurirani</string>
+    <string name="emp_not_updated_msg">Nema šta ažurirati</string>
+    <string name="emp_details_liabilities_btn">Zaduženja</string>
+    <string name="insert_location_btn_lbl">Dodaj</string>
+    <string name="insert_location_name_lbl">Naziv:</string>
+    <!-- Location update fragment -->
+    <string name="update_location_name_lbl">Naziv:</string>
+    <string name="update_location_btn_lbl">Ažuriraj</string>
+    <string name="location_updated_msg">Lokacija ažurirana</string>
+    <string name="location_not_updated_msg">Nema šta ažurirati</string>
+    <!-- Location delete button label -->
+    <string name="location_del_btn_text">Obriši</string>
+    <string name="context_title">Odaberite opciju</string>
+    <string name="context_details">Detalji</string>
+    <string name="context_update">Ažuriraj</string>
+
+    <string name="asset_add_pic_lbl">Dodaj</string>
+    <string name="asset_name_lbl">Naziv:</string>
+    <string name="asset_employee_lbl">Zaposleni:</string>
+    <string name="asset_location_lbl">Lokacija:</string>
+    <string name="asset_date_lbl">Datum:</string>
+    <string name="asset_desc_lbl">Opis:</string>
+    <string name="asset_price_lbl">Cijena:</string>
+    <string name="asset_barcode_lbl">Barkod:</string>
+    <string name="asset_del_btn_lbl">Obrisi</string>
+    <string name="asset_update_btn_lbl">Ažuriraj</string>
+    <string name="asset_insert_btn_lbl">Dodaj</string>
+    <string name="asset_barcode_btn_lbl">Skeniraj</string>
+
+    <string name="inv_item_new_emp_lbl">Novi zaposleni</string>
+    <string name="inv_item_new_loc_lbl">Nova lokacija</string>
+    <string name="inv_item_save_btn_lbl">Sačuvaj</string>
+    <string name="inv_item_find_barcode_btn_lbl">Pronađi</string>
+    <string name="inv_list_et_hint_lbl">Naziv</string>
+    <string name="inv_list_name_tv_text">Unesite naziv</string>
+
+    <string name="update_msg">Uspješno ažuriranje</string>
+    <string name="insert_msg">Uspješno dodavanje</string>
+    <string name="cannot_update_msg">Podaci su već ažurni</string>
+    <string name="missing_data_msg">Nisu uneseni svi podaci</string>
+    <string name="barcode_not_entered_msg">Barkod nije unešen</string>
+    <string name="non_valid_input_msg">Nevalidan unos</string>
+    <string name="no_asset_barcode_msg">Ne postoji OS sa datim barkodom</string>
+    <string name="scan_canceled_msg">Skeniranje otkazano</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
