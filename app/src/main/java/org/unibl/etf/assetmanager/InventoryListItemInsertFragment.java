@@ -102,7 +102,7 @@ public class InventoryListItemInsertFragment extends Fragment {
     private void onAddClick(View view){
         // check if all fields are filled
         // db.getInventoryItemDAO().insert(listId,fields...)
-        if(!newEmployeeTV.getText().toString().isEmpty() && !newLocationTV.getText().toString().isEmpty()){
+        if(!newEmployeeTV.getText().toString().isEmpty() && newEmployeeTV.getText().toString().contains(" ") && !newLocationTV.getText().toString().isEmpty()){
             Executors.newSingleThreadExecutor().execute(()->{
                 String[] name=newEmployeeTV.getText().toString().split(" ");
                 String location=newLocationTV.getText().toString();

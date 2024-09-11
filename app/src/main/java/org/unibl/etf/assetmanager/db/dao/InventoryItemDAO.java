@@ -22,4 +22,8 @@ public interface InventoryItemDAO {
     @Transaction
     @Query("INSERT INTO inventory_item(assetId,newLocationId,newEmployeeId,listId) values(:assetId,:locationId,:employeeId,:listId)")
     void insert(Long assetId,Long locationId,Long employeeId,Long listId);
+
+    @Transaction
+    @Query("SELECT * FROM inventory_item WHERE assetId=:id")
+    List<InventoryItemFull> findAllByAssetId(Long id);
 }

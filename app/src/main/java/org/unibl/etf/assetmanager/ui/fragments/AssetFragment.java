@@ -17,6 +17,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.SearchView;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -24,6 +25,7 @@ import org.unibl.etf.assetmanager.R;
 import org.unibl.etf.assetmanager.adapter.AssetAdapter;
 import org.unibl.etf.assetmanager.db.AssetManagerDB;
 import org.unibl.etf.assetmanager.db.model.AssetFull;
+import org.unibl.etf.assetmanager.db.model.InventoryItemFull;
 import org.unibl.etf.assetmanager.util.Constants;
 
 import java.util.ArrayList;
@@ -65,12 +67,17 @@ public class AssetFragment extends Fragment {
             public void onDeleteClick(AssetFull asset, int position) {
                 ExecutorService executorService= Executors.newSingleThreadExecutor();
                 executorService.execute(()->{
-                   db.getAssetDAO().delete(asset.getAsset().getId());
-                    new Handler(Looper.getMainLooper()).post(()->{
-                        assets.remove(asset);
-                        filteredAssets.remove(asset);
-                        adapter.notifyItemRemoved(position);
-                    });
+                    List<InventoryItemFull> inventoryItems=db.getInventoryItemDAO().findAllByAssetId(asset.getAsset().getId());
+                   if(inventoryItems!=null && inventoryItems.isEmpty()){
+                       db.getAssetDAO().delete(asset.getAsset().getId());
+                       new Handler(Looper.getMainLooper()).post(()->{
+                           assets.remove(asset);
+                           filteredAssets.remove(asset);
+                           adapter.notifyItemRemoved(position);
+                       });
+                   }else new Handler(Looper.getMainLooper()).post(()->{
+                       Toast.makeText(root.getContext(),getString(R.string.cannot_delete),Toast.LENGTH_SHORT).show();
+                   });
                 });
             }
 

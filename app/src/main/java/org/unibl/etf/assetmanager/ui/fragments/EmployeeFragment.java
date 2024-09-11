@@ -17,12 +17,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.SearchView;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import org.unibl.etf.assetmanager.R;
 import org.unibl.etf.assetmanager.adapter.EmployeeAdapter;
 import org.unibl.etf.assetmanager.db.AssetManagerDB;
+import org.unibl.etf.assetmanager.db.model.AssetFull;
 import org.unibl.etf.assetmanager.db.model.EmployeeFull;
 import org.unibl.etf.assetmanager.util.Constants;
 
@@ -68,12 +70,17 @@ public class EmployeeFragment extends Fragment {
             public void onDeleteClick(EmployeeFull employee, int position) {
                     ExecutorService executorService=Executors.newSingleThreadExecutor();
                     executorService.execute(()->{
-                      db.getEmployeeDAO().delete(employee.getEmployee().getId());
-                      new Handler(Looper.getMainLooper()).post(()->{
-                          employees.remove(employee);
-                          filteredEmployees.remove(employee);
-                          adapter.notifyItemRemoved(position);
-                      });
+                        List<AssetFull> assets=db.getAssetDAO().getAllAssetsByEmployeeId(employee.getEmployee().getId());
+                        if(assets!=null && assets.isEmpty()){
+                            db.getEmployeeDAO().delete(employee.getEmployee().getId());
+                            new Handler(Looper.getMainLooper()).post(()->{
+                                employees.remove(employee);
+                                filteredEmployees.remove(employee);
+                                adapter.notifyItemRemoved(position);
+                            });
+                        }else new Handler(Looper.getMainLooper()).post(()->{
+                            Toast.makeText(root.getContext(), getString(R.string.cannot_delete),Toast.LENGTH_SHORT).show();
+                        });
                     });
             }
 

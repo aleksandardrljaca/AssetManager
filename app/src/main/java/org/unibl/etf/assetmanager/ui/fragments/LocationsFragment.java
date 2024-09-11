@@ -17,6 +17,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.SearchView;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -24,6 +25,7 @@ import org.unibl.etf.assetmanager.R;
 import org.unibl.etf.assetmanager.adapter.EmployeeAdapter;
 import org.unibl.etf.assetmanager.adapter.LocationAdapter;
 import org.unibl.etf.assetmanager.db.AssetManagerDB;
+import org.unibl.etf.assetmanager.db.model.AssetFull;
 import org.unibl.etf.assetmanager.db.model.EmployeeFull;
 import org.unibl.etf.assetmanager.db.model.Location;
 import org.unibl.etf.assetmanager.util.Constants;
@@ -68,11 +70,16 @@ public class LocationsFragment extends Fragment {
             public void onDeleteClick(Location location, int position) {
                 ExecutorService executorService= Executors.newSingleThreadExecutor();
                 executorService.execute(()->{
-                    db.getLocationDAO().delete(location.getId());
-                    new Handler(Looper.getMainLooper()).post(()->{
-                        locations.remove(location);
-                        filteredLocations.remove(location);
-                        adapter.notifyItemRemoved(position);
+                    List<AssetFull> assets=db.getAssetDAO().getAllAssetsByLocationId(location.getId());
+                    if(assets!=null && assets.isEmpty()){
+                        db.getLocationDAO().delete(location.getId());
+                        new Handler(Looper.getMainLooper()).post(()->{
+                            locations.remove(location);
+                            filteredLocations.remove(location);
+                            adapter.notifyItemRemoved(position);
+                        });
+                    }else new Handler(Looper.getMainLooper()).post(()->{
+                        Toast.makeText(root.getContext(), getString(R.string.cannot_delete), Toast.LENGTH_SHORT).show();
                     });
                 });
             }

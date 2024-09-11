@@ -70,5 +70,5 @@
     <string name="scan_canceled_msg">Skeniranje otkazano</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-
+    <string name="cannot_delete">Podatak ne moze biti obrisan. Referencira se negdje.</string>
 </resources>

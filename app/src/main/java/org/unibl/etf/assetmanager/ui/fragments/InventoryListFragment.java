@@ -64,6 +64,7 @@ public class InventoryListFragment extends Fragment {
             public void onDeleteClick(InventoryListFull inventoryListFull, int position) {
                 ExecutorService executorService= Executors.newSingleThreadExecutor();
                 executorService.execute(()->{
+                    db.getInventoryItemDAO().deleteAllFromInventoryList(inventoryListFull.getInventoryList().getId());
                     db.getInventoryListDAO().delete(inventoryListFull.getInventoryList().getId());
                     new Handler(Looper.getMainLooper()).post(()->{
                         inventoryLists.remove(inventoryListFull);

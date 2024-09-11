@@ -86,4 +86,6 @@
     <string name="non_valid_input_msg">Input not valid</string>
     <string name="no_asset_barcode_msg">No asset with given barcode</string>
     <string name="scan_canceled_msg">Scan cancelled</string>
+
+    <string name="cannot_delete">Data can\'t be deleted. Referenced somewhere.</string>
 </resources>
