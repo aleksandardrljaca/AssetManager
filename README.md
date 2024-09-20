@@ -1,3 +1,3 @@
-# Asset Manager
+# Asset Manager - Android app
 
-![alt text](https://github.com/aleksandardrljaca/mobilnoFinal/ui_images/home.jpg)
+![Home](https://github.com/aleksandardrljaca/AssetManager/ui_images/home.jpg)
